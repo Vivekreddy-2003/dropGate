@@ -1,0 +1,36 @@
+{
+  "name": "dropgate-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dropgate backend API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "db:migrate": "knex migrate:latest",
+    "db:migrate:rollback": "knex migrate:rollback",
+    "db:migrate:make": "knex migrate:make",
+    "db:seed": "knex seed:run",
+    "db:seed:make": "knex seed:make",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "ioredis": "^6.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

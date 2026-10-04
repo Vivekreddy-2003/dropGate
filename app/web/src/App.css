@@ -1,0 +1,267 @@
+.layout {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.page-heading {
+  margin-bottom: 1.5rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.center {
+  text-align: center;
+}
+
+.error {
+  color: var(--danger);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.panel-success {
+  border-color: rgba(57, 255, 136, 0.4);
+  box-shadow: 0 0 24px var(--accent-dim);
+}
+
+.panel-fail {
+  border-color: rgba(255, 107, 107, 0.4);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.form.wide {
+  max-width: 100%;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #051008;
+}
+
+.btn-secondary {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border-color: var(--border);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-dim);
+  text-decoration: none;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0.5rem 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.badge-live {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.badge-scheduled {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.badge-queued {
+  color: #93c5fd;
+}
+
+.badge-admitted {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.badge-sold_out {
+  color: var(--danger);
+}
+
+.waiting-hero {
+  text-align: center;
+}
+
+.queue-number {
+  font-family: var(--mono);
+  font-size: clamp(4rem, 18vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  margin: 0.5rem 0 1rem;
+  text-shadow: 0 0 40px var(--accent-dim);
+}
+
+.countdown {
+  font-family: var(--mono);
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  margin: 0.5rem 0 1rem;
+}
+
+.countdown-urgent {
+  color: #ffb020;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.75;
+  }
+}
+
+.checkout-panel {
+  text-align: center;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.stats-list strong {
+  color: var(--accent);
+  font-size: 1.25rem;
+}
